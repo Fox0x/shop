@@ -1,0 +1,76 @@
+.registration-form {
+    display: flex;
+    align-items: center;
+    flex-flow: column wrap;
+}
+
+.registration-form .form {
+    margin-top: 10%;
+    padding: 2rem;
+    /* Glassmorphism*/
+    background: rgba(218, 218, 218, 0.5);
+    box-shadow: 0 8px 32px 0 rgba(15, 15, 19, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.registration-form .form .error {
+    font-size: 14px;
+    color: crimson;
+}
+
+.registration-form .form .form-header {
+    color: #6c705f;
+}
+
+.registration-form .form input {
+    margin: 5px 50px 0 45px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-size: 16px;
+    color: rgb(84, 84, 84);
+}
+
+.registration-form .form input:focus {
+    outline: none;
+    border-bottom: 3px solid rgba(98, 98, 83, 0.72);
+}
+
+.registration-form .form input:focus::placeholder {
+    color: transparent;
+}
+
+.registration-form .form label {
+    margin-left: 35px;
+    font-size: 18px;
+    color: rgb(84, 84, 84);
+}
+
+.registration-form .form button {
+    margin: 15px;
+    padding: 10px;
+    width: -moz-available;
+    width: available;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    background-color: #6c705f;
+    color: antiquewhite;
+}
+
+.registration-form .form button:hover {
+    background-color: #a2a88e;
+    color: antiquewhite;
+    border-bottom: 3px solid rgba(98, 98, 83, 0.72);
+    margin-bottom: 12px;
+}
+
+.registration-form .form .login-link {
+    text-align: center;
+    color: rgb(84, 84, 84);
+}

@@ -1,0 +1,21 @@
+.socialSeparator {
+    display: flex;
+    align-items: center;
+    --socialSeparator-gap: 1rem;
+}
+
+.socialSeparator::before,
+.socialSeparator::after {
+    content: '';
+    height: 3px;
+    background-color: silver;
+    flex-grow: 1;
+}
+
+.socialSeparator::before {
+    margin-right: var(--socialSeparator-gap);
+}
+
+.socialSeparator::after {
+    margin-left: var(--socialSeparator-gap);
+}

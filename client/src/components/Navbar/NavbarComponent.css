@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+.navbar-component {
+    margin: 10px;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    outline: none;
+    border: none;
+}
+
+.navbar-component nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: rgba(38, 37, 37, 0.5);
+    border-radius: 10px;
+    border-bottom: 3px solid rgba(68, 68, 68, .5);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    -webkit-box-shadow: 0 0 15px -6px #050505;
+    box-shadow: 0 0 15px -6px #050505;
+}
+
+@media screen and (max-width: 576px) {
+    .navbar-component nav {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding: 7px 0;
+    }
+}
+
+.navbar-component .logo img {
+    margin: 5px;
+    width: 150px;
+    height: 80px;
+}
+
+.navbar-component ul {
+    list-style-type: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar-component ul {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
+    }
+
+    .navbar-component .logo img {
+        margin: 0;
+    }
+}
+
+.navbar-component ul li {
+    padding: 5px 20px;
+}
+
+.navbar-component ul li a {
+    color: #c2c2c2;
+    font-size: 1.7em;
+    text-decoration: none;
+    position: relative;
+}
+
+.navbar-component ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: -7px;
+    left: 43%;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.navbar-component ul li a:hover::before {
+    background-color: #fff;
+}
+
+.navbar-component .login-button {
+    display: flex;
+    align-items: center;
+    outline: none;
+    text-decoration: none;
+    font-size: 1.5em;
+    color: #c2c2c2;
+    margin-right: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.navbar-component .login-button img {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    margin-right: 10px;
+}
+
+.navbar-component .login-button:hover {
+    color: #f6f6f6;
+    transform: scale(1.2);
+}
