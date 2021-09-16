@@ -1,14 +1,15 @@
 import React from 'react';
 import './ShopPage.css'
 import {NavbarComponent} from '../../components/Navbar/NavbarComponent'
-import {Card} from "../../components/Card/Card";
+import {ItemCardContainer} from "../../components/ItemCardContainer/ItemCardContainer";
 
 
 export const ShopPage = () => {
     return (
         <div className={'shop-page'}>
             <NavbarComponent/>
-            <Card/>
+            <ItemCardContainer/>
         </div>
     )
 }
+

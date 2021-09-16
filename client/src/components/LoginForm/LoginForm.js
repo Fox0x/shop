@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import './LoginForm.css'
-import {login} from "../../actions/auth";
+import {login} from "../../http/auth";
 
 export const LoginForm = () => {
 

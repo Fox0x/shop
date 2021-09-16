@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import './RegistrationForm.css'
-import {registration} from "../../actions/auth";
+import {registration} from "../../http/auth";
 
 export const RegistrationForm = () => {
     const [name, setName] = useState('');

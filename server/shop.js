@@ -4,6 +4,7 @@ const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const mongoose = require('mongoose');
 const authRouter = require('./router/authRouter')
+const itemRouter = require('./router/itemsRouter.js')
 const errorHandler = require('./middlewares/errorHandling-middleware')
 
 const PORT = config.get('PORT') || 5000;
@@ -16,6 +17,7 @@ app.use(cors({
     origin: config.get('CLIENT_URL')
 }));
 app.use('/auth', authRouter);
+app.use('/api', itemRouter);
 
 
 //ErrorHandler - last point
