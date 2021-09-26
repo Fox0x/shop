@@ -12,14 +12,11 @@ export const ShopPage = () => {
 
     const [fetchItems, isItemsLoading, itemsError] = useFetching(async () => {
         const response = await Items.getItems()
-        console.log('useFetching',response)
-        console.log('isItemsLoading: ', isItemsLoading)
         setItems(response)
     })
 
     useEffect(() => {
         fetchItems()
-        console.log(items)
     }, [])
 
     return (

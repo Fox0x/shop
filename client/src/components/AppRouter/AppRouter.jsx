@@ -1,12 +1,13 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {Redirect, Route, Switch} from 'react-router-dom';
 import {privateRoutes, publicRoutes} from '../../router/routes'
+import {GlobalContext} from "../../context";
 
 const AppRouter = () => {
-    const isAuth = true
+    const {isAuth} = useContext(GlobalContext)
     return (
-        isAuth ?
-
+        isAuth
+            ?
             <Switch>
                 {
                     privateRoutes.map((route, index) =>
@@ -19,9 +20,7 @@ const AppRouter = () => {
                 }
                 <Redirect to='/shop'/>
             </Switch>
-
             :
-
             <Switch>
                 {
                     publicRoutes.map((route, index) =>
@@ -32,7 +31,7 @@ const AppRouter = () => {
                             exact={route.exact}/>
                     )
                 }
-                <Redirect to='/login'/>
+                <Redirect to='/auth/login'/>
             </Switch>
     )
 };

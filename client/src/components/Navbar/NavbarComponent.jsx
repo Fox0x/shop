@@ -1,6 +1,11 @@
 import './NavbarComponent.css'
+import {useContext} from "react";
+import {GlobalContext} from "../../context";
 
 export const NavbarComponent = () => {
+
+    const {isAuth} = useContext(GlobalContext)
+
     return (
         <div className={'navbar-component'}>
             <nav>
@@ -19,9 +24,15 @@ export const NavbarComponent = () => {
                         <a href="contact">Contact</a>
                     </li>
                 </ul>
-                <a href={'/auth/login'} className={'login-button'}>
-                    Login
-                </a>
+                {
+                    isAuth
+                        ? <a href={'/cart'} className={'cart-button'}>
+                            Cart
+                        </a>
+                        : <a href={'/auth/login'} className={'login-button'}>
+                            Login
+                        </a>
+                }
             </nav>
         </div>
     )

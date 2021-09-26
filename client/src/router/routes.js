@@ -9,6 +9,7 @@ export const privateRoutes = [
 ]
 
 export const publicRoutes = [
+    {path: '/shop', component: ShopPage, exact: true},
     {path: '/auth/login', component: LoginPage, exact: true},
     {path: '/auth/registration', component: RegistrationPage, exact: true},
 ]

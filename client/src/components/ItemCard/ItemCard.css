@@ -16,6 +16,16 @@ p {
     width: 250px;
     max-width: 100%;
     text-align: center;
+    transition: all .1s ease-in-out;
+}
+
+.card:hover {
+    background-color: rgba(38, 37, 37, 0.6);
+    animation: 0.3s linear ease-in-out;
+    transform: scale(1.05);
+    -webkit-box-shadow: rgb(0, 0, 0) 0px 10px 13px -7px, 5px 5px 12px 14px rgba(0,0,0,0);
+    box-shadow: rgb(0, 0, 0) 0px 10px 13px -7px, 5px 5px 12px 14px rgba(0,0,0,0);
+    border-bottom: 3px solid rgba(255, 255, 255, 0.64);
 }
 
 .card .round {

@@ -44,14 +44,12 @@ class UserService {
     async login(email, password) {
         const user = await UserModel.findOne({email})
         if (!user) {
-            //TODO Remove hint
-            throw new Error('Invalid email or password (EMAIL)')
+            return null
         }
 
         const isPasswordCorrect = await bcrypt.compare(password, user.password)
         if (!isPasswordCorrect) {
-            //TODO Remove hint
-            throw new Error('Invalid email or password (PASS)')
+            return null
         }
 
         return this.createUserToken(user)

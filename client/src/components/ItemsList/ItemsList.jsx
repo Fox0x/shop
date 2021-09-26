@@ -4,7 +4,6 @@ import {Spinner} from "../Spinner/Spinner";
 import './ItemsList.css'
 
 const ItemsList = ({items}) => {
-    console.log('ItemsList', items)
     if (!items.length) {
         return <Spinner/>
     }

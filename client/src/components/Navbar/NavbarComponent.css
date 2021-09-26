@@ -105,3 +105,18 @@
     color: #f6f6f6;
     transform: scale(1.2);
 }
+
+.navbar-component .cart-button {
+    display: flex;
+    align-items: center;
+    outline: none;
+    text-decoration: none;
+    margin-right: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.navbar-component .cart-button:hover {
+    color: #f6f6f6;
+    transform: scale(1.2);
+}

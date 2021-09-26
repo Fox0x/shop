@@ -21,12 +21,14 @@ class AuthController {
         try {
             const {email, password} = req.body
             const userData = await userService.login(email, password)
-            res.cookie('refreshToken', userData.refreshToken, {
-                maxAge: 1000 * 60 * 60 * 24 * 30,
-                httpOnly: true,
-                sameSite: "lax"
-            }) //TODO Add secure:true to options if https
-            return res.json(userData);
+            if (userData) {
+                res.cookie('refreshToken', userData.refreshToken, {
+                    maxAge: 1000 * 60 * 60 * 24 * 30,
+                    httpOnly: true,
+                    sameSite: "lax"
+                }) //TODO Add secure:true to options if https
+                return res.json(userData);
+            } else res.status(403).json({message: 'Invalid email or password'})
         } catch (e) {
             console.log(e)
         }
