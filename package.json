@@ -4,7 +4,12 @@
   "description": "",
   "main": "shop.js",
   "scripts": {
-    "dev": "nodemon shop.js"
+    "start": "cross-env NODE_ENV=production node shop.js",
+    "server": "nodemon shop.js",
+    "client": "npm run start --prefix client",
+    "client:install": "npm run install --prefix client",
+    "client:build": "npm run build --prefix client",
+    "dev": "cross-env NODE_ENV=development concurrently \"npm run server\" \"npm run client\""
   },
   "keywords": [],
   "author": "",
@@ -24,6 +29,8 @@
     "uuid": "^8.3.2"
   },
   "devDependencies": {
+    "concurrently": "^6.2.1",
+    "cross-env": "^7.0.3",
     "nodemon": "^2.0.12"
   }
 }
