@@ -1,4 +1,10 @@
-.idea/
-/node_modules
-/client/node_modules
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+# dependencies
+/node_modules
+
+# Project exclude paths
+/server/node_modules/
+/client/node_modules/
+.idea/
+/server/config/

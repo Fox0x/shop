@@ -1,6 +1,5 @@
 const express = require('express');
 const config = require('config');
-const path = require('path')
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const mongoose = require('mongoose');
@@ -20,15 +19,9 @@ app.use(cors({
 app.use('/auth', authRouter);
 app.use('/api', itemRouter);
 
+
 //ErrorHandler - last point
 app.use(errorHandler)
-
-if (process.env.NODE_ENV === 'production') {
-    app.get('*', (req, res) => {
-        res.sendFile(path.resolve(__dirname, 'client', 'index.html'))
-    } )
-}
-
 const start = async (uri, callback) => {
     try {
         await mongoose.connect(config.get('DB_URL'), {
