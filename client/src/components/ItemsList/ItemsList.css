@@ -1,0 +1,5 @@
+.itemsList {
+    display: flex;
+    margin: 4rem;
+    flex-wrap: wrap;
+}

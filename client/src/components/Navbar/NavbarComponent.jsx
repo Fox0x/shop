@@ -1,4 +1,3 @@
-import React from "react";
 import './NavbarComponent.css'
 
 export const NavbarComponent = () => {
@@ -14,15 +13,13 @@ export const NavbarComponent = () => {
                         <a href="/shop">Home</a>
                     </li>
                     <li>
-                        <a href="#">About</a>
+                        <a href="/about">About</a>
                     </li>
                     <li>
-                        <a href="#">Contact</a>
+                        <a href="contact">Contact</a>
                     </li>
                 </ul>
                 <a href={'/auth/login'} className={'login-button'}>
-                    <img src={'https://randomuser.me/api/portraits/men/11.jpg'}
-                         alt={'#'}/>
                     Login
                 </a>
             </nav>

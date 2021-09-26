@@ -67,7 +67,7 @@
     padding: 5px 20px;
 }
 
-.navbar-component ul li a {
+.navbar-component a {
     color: #c2c2c2;
     font-size: 1.7em;
     text-decoration: none;
@@ -96,18 +96,9 @@
     align-items: center;
     outline: none;
     text-decoration: none;
-    font-size: 1.5em;
-    color: #c2c2c2;
     margin-right: 20px;
     padding-right: 20px;
     padding-left: 20px;
-}
-
-.navbar-component .login-button img {
-    width: 50px;
-    height: 50px;
-    border-radius: 25px;
-    margin-right: 10px;
 }
 
 .navbar-component .login-button:hover {

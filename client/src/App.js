@@ -1,14 +1,12 @@
-import React from 'react'
-import './App.css'
 import {BrowserRouter} from 'react-router-dom'
-import {Routes} from './routes'
+import AppRouter from "./components/AppRouter/AppRouter";
+
+
 
 function App() {
-    const routes = Routes(false)
-
     return (
         <BrowserRouter>
-            <div>{routes}</div>
+            <AppRouter/>
         </BrowserRouter>
     )
 }
