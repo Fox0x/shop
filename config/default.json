@@ -1,5 +1,5 @@
 {
-"PORT":  5000,
+"PORT":  80,
 "DB_URL": "mongodb+srv://jwt-auth:8sH0VDSfTUmTPjiS@cluster0.k3olp.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
 "JWT_ACCESS_SECRET": "321jwt-supersecret-key123",
 "JWT_REFRESH_SECRET": "321jwt-supersecret-refresh-key123",
@@ -9,6 +9,6 @@
 "SMTP_PORT": "587",
 "SMTP_USER": "alexandria.auth@gmail.com",
 "SMTP_PASSWORD": "9WPEfrhgCpeX93F",
-"API_URL": "http://localhost:5000",
-"CLIENT_URL": "http://localhost:3000"
+"API_URL": "https://alexandria-shop.herokuapp.com/:5000",
+"CLIENT_URL": "https://alexandria-shop.herokuapp.com:3000"
 }
