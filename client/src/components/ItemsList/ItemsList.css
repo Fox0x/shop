@@ -1,5 +1,13 @@
 .itemsList {
     display: flex;
-    margin: 4rem;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+}
+
+@media screen and (max-width: 768px) {
+    .itemsList {
+        padding: 0;
+    }
 }

@@ -19,9 +19,9 @@ app.use(cors({
 app.use('/auth', authRouter);
 app.use('/api', itemRouter);
 
-
 //ErrorHandler - last point
 app.use(errorHandler)
+
 const start = async (uri, callback) => {
     try {
         await mongoose.connect(config.get('DB_URL'), {

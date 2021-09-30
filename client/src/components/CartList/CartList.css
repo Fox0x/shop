@@ -1,0 +1,30 @@
+.cartList {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: #c2c2c2;
+    margin: 30px 350px 0;
+    padding-bottom: 30px;
+    border-radius: 30px;
+    background-color: white;
+    background-color: rgba(38, 37, 37, 0.4);
+}
+
+.cartList table {
+    border-spacing: 30px !important;
+}
+
+.cartList th {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.6rem;
+}
+
+.cartList tr:hover {
+    transform: scale(1.01);
+}
+
+.cartList button {
+    width: fit-content;
+    align-self: center;
+}

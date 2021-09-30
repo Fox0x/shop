@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import './LoginForm.css'
 import {login} from "../../http/auth";
+import {Link} from "react-router-dom";
 
 export const LoginForm = () => {
 
@@ -31,7 +32,7 @@ export const LoginForm = () => {
                 <button onClick={() => login(email, password)} type={'submit'}>Login</button>
                 {/*Registration link*/}
                 <p className={'registration-link'}>Not registered yet? &nbsp;
-                    <a href={'/auth/registration'}>Registration</a>
+                    <Link to={'/auth/registration'}>Registration</Link>
                 </p>
             </div>
 

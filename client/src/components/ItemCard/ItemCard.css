@@ -6,12 +6,12 @@ p {
 }
 
 .card {
-    background-color: rgba(38, 37, 37, 0.5);
+    background-color: rgba(38, 37, 37, 0.7);
     border-radius: 10px;
     border-bottom: 3px solid rgba(68, 68, 68, .5);
     box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.75);
     color: #c2c2c2;
-    padding: 30px 15px 10px;
+    padding: 30px 15px 30px;
     margin: 15px 30px;
     width: 250px;
     max-width: 100%;
@@ -20,7 +20,7 @@ p {
 }
 
 .card:hover {
-    background-color: rgba(38, 37, 37, 0.6);
+    background-color: rgba(38, 37, 37, 0.9);
     animation: 0.3s linear ease-in-out;
     transform: scale(1.05);
     -webkit-box-shadow: rgb(0, 0, 0) 0px 10px 13px -7px, 5px 5px 12px 14px rgba(0,0,0,0);
@@ -32,15 +32,4 @@ p {
     border: 1px solid #c2c2c2;
     border-radius: 50%;
     padding: 7px;
-}
-
-button.primary {
-    border: 1px solid #c2c2c2;
-    border-radius: 3px;
-    font-family: Montserrat, sans-serif;
-    font-weight: 500;
-    padding: 10px 25px;
-    background-color: transparent;
-    color: #c2c2c2;
-    margin-bottom: 30px;
 }

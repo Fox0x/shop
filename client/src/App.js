@@ -8,7 +8,6 @@ import {useEffect, useState} from "react";
 function App() {
 
     const [isAuth, setIsAuth] = useState(true)
-    // const [isLoading, setIsLoading] = useState()
 
     useEffect(() => {
         localStorage.getItem('token') ? setIsAuth(true) : setIsAuth(false)

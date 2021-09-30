@@ -2,6 +2,7 @@ html, body {
     margin: 0;
     height: 100%;
     width: auto;
+    scrollbar-width:  none;
 }
 
 body {
@@ -11,4 +12,6 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background: no-repeat top/cover url("./img/background.jpg");
+    background-attachment: fixed;
 }
+

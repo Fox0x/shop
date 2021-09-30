@@ -1,0 +1,14 @@
+.styledButton {
+    border: 1px solid #c2c2c2;
+    border-radius: 3px;
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    padding: 10px 25px;
+    background-color: transparent;
+    color: #c2c2c2;
+}
+
+.styledButton:hover {
+    transform: scale(1.05);
+    background-color: rgba(38, 37, 37, 0.3);
+}

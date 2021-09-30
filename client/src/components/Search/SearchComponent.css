@@ -1,0 +1,48 @@
+.searchContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.searchBg {
+    display: flex;
+    width: fit-content;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    background-color: rgba(38, 37, 37, 0.5);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.75);
+    padding: 5px 10px;
+}
+
+.searchBg:hover {
+    background-color: rgba(38, 37, 37, 0.6);
+    animation: 0.5s linear ease-in-out;
+    transform: scale(1.05);
+    -webkit-box-shadow: rgb(0, 0, 0) 0 10px 13px -7px, 5px 5px 12px 14px rgba(0, 0, 0, 0);
+    box-shadow: rgb(0, 0, 0) 0 10px 13px -7px, 5px 5px 12px 14px rgba(0, 0, 0, 0);
+}
+
+.searchBg img {
+    color: white;
+    width: 20px;
+    align-self: center;
+}
+
+.searchInput {
+    font-family: Montserrat, sans-serif;
+    font-size: 1.4em;
+    color: #c2c2c2;
+    width: fit-content;
+    background: transparent;
+    outline: none;
+    border: none;
+    /*border-bottom: 3px solid rgba(68, 68, 68, .5);*/
+}
+
+.searchInput:focus::-moz-placeholder {
+    color: transparent;
+}
+
