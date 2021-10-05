@@ -1,6 +1,6 @@
 import React from 'react';
 import './CardItem.css'
-import StyledButton from "../StyledButton/StyledButton";
+import StyledButton from "../UI/StyledButton/StyledButton";
 
 const CartItem = ({item, amount, prise, totalCost}) => {
 

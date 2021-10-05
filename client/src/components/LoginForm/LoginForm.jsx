@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import './LoginForm.css'
 import {login} from "../../http/auth";
 import {Link} from "react-router-dom";
+import StyledInput from "../UI/StyledInput/StyledInput";
 
 export const LoginForm = () => {
 
@@ -17,17 +18,23 @@ export const LoginForm = () => {
             <div className={'form'}>
                 <h1 className={'form-header'}>Login</h1>
                 {/*Email input*/}
-                <p>
-                    <label htmlFor={'email'}>Email</label><br/>
-                    <input type={'text'} placeholder={'Email'} value={email}
-                           onChange={event => setEmail(event.target.value)}/>
-                </p>
+                <StyledInput
+                    value={email}
+                    onChange={event => setEmail(event.target.value)}
+                    type={'text'}
+                    placeholder={'Email'}
+                    htmlFor={'email'}>
+                    Email
+                </StyledInput>
                 {/*Password input*/}
-                <p>
-                    <label htmlFor={'password'}>Password</label><br/>
-                    <input type={'password'} placeholder={'Password'} value={password}
-                           onChange={event => setPassword(event.target.value)}/>
-                </p>
+                <StyledInput
+                    value={password}
+                    onChange={event => setPassword(event.target.value)}
+                    type={'password'}
+                    placeholder={'Password'}
+                    htmlFor={'password'}>
+                    Password
+                </StyledInput>
                 {/*Submit button*/}
                 <button onClick={() => login(email, password)} type={'submit'}>Login</button>
                 {/*Registration link*/}

@@ -1,7 +1,7 @@
 import './CartList.css'
 import React, {useEffect, useState} from 'react';
 import CartItem from "../CartItem/CartItem";
-import StyledButton from "../StyledButton/StyledButton";
+import StyledButton from "../UI/StyledButton/StyledButton";
 
 const CartList = (props) => {
 

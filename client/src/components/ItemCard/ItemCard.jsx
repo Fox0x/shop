@@ -1,5 +1,5 @@
 import './ItemCard.css'
-import StyledButton from "../StyledButton/StyledButton";
+import StyledButton from "../UI/StyledButton/StyledButton";
 
 const ItemCard = ({item, addToCart}) => {
 

@@ -1,0 +1,24 @@
+.styledInput input {
+    margin: 5px 50px 0 45px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-size: 16px;
+    color: rgb(84, 84, 84);
+}
+
+.styledInput input:focus {
+    outline: none;
+    border-bottom: 3px solid rgba(98, 98, 83, 0.72);
+}
+
+.styledInput input:focus::placeholder {
+    color: transparent;
+}
+
+.styledInput label {
+    margin-left: 35px;
+    font-size: 18px;
+    color: rgb(84, 84, 84);
+}

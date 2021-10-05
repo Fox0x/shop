@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import './RegistrationForm.css'
 import {registration} from "../../http/auth";
 import {Link} from "react-router-dom";
+import StyledInput from "../UI/StyledInput/StyledInput";
 
 export const RegistrationForm = () => {
     const [name, setName] = useState('');
@@ -19,35 +20,50 @@ export const RegistrationForm = () => {
         <div className={'registration-form'}>
             <div className={'form'}>
                 <h1 className={'form-header'}>Registration</h1>
-                <p>
-                    <label htmlFor={'name'}>Name</label><br/>
-                    <input type={'text'} placeholder={'Name'} value={name}
-                           onChange={event => setName(event.target.value)}/>
-                </p>
+                <StyledInput
+                    value={name}
+                    onChange={event => setName(event.target.value)}
+                    type={'text'}
+                    placeholder={'Name'}
+                    htmlFor={'name'}>
+                    Name
+                </StyledInput>
 
-                <p>
-                    <label htmlFor={'phone'}>Phone</label><br/>
-                    <input type={'text'} placeholder={'Phone'} value={phone}
-                           onChange={event => setPhone(event.target.value)}/>
-                </p>
+                <StyledInput
+                    value={phone}
+                    onChange={event => setPhone(event.target.value)}
+                    type={'text'}
+                    placeholder={'Phone'}
+                    htmlFor={'phone'}>
+                    Phone
+                </StyledInput>
 
-                <p>
-                    <label htmlFor={'email'}>Email</label><br/>
-                    <input type={'email'} placeholder={'Email'} value={email}
-                           onChange={event => setEmail(event.target.value)}/>
-                </p>
+                <StyledInput
+                    value={email}
+                    onChange={event => setEmail(event.target.value)}
+                    type={'text'}
+                    placeholder={'Email'}
+                    htmlFor={'email'}>
+                    Email
+                </StyledInput>
 
-                <p>
-                    <label htmlFor={'password'}>Password</label><br/>
-                    <input type={'password'} placeholder={'Password'} value={password}
-                           onChange={event => setPassword(event.target.value)}/>
-                </p>
+                <StyledInput
+                    value={password}
+                    onChange={event => setPassword(event.target.value)}
+                    type={'password'}
+                    placeholder={'Password'}
+                    htmlFor={'password'}>
+                    Password
+                </StyledInput>
 
-                <p>
-                    <label htmlFor={'confirmPassword'}>Confirm Password</label><br/>
-                    <input type={'password'} placeholder={'Confirm Password'} value={confirmPassword}
-                           onChange={event => setConfirmPassword(event.target.value)}/>
-                </p>
+                <StyledInput
+                    value={confirmPassword}
+                    onChange={event => setConfirmPassword(event.target.value)}
+                    type={'password'}
+                    placeholder={'Confirm Password'}
+                    htmlFor={'confirmPassword'}>
+                    Confirm password
+                </StyledInput>
 
                 <button type={'submit'} onClick={() => registration(name, phone, email, password)}>Register</button>
 
