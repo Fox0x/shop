@@ -1,9 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
 .navbar-component {
     margin: 10px;
     padding: 0;
-    font-family: 'Raleway', sans-serif;
     outline: none;
     border: none;
 }

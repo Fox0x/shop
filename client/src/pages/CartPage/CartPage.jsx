@@ -25,7 +25,9 @@ const CartPage = () => {
                     ?
                     <CartList remove={removeItemFromCart} cart={cart}/>
                     :
-                    <h1>Ваша корзина пуста</h1>
+                    <div className={'cartPlaceholder'}>
+                        <h1>Ваша корзина пустая</h1>
+                    </div>
 
             }
         </div>
