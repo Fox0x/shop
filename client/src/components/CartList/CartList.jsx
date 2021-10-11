@@ -3,11 +3,11 @@ import React, {useEffect, useState} from 'react';
 import CartItem from "../CartItem/CartItem";
 import StyledButton from "../UI/StyledButton/StyledButton";
 
-const CartList = (props) => {
+const CartList = ({cart, remove}) => {
 
     const [totalCost, setTotalCost] = useState(0)
 
-    const cartList = props.cart.map((item) => {
+    const cartList = cart.map((item) => {
         return {count: 1, name: item.itemTitle}
     }).reduce((list, item) => {
         list[item.name] = (list[item.name] || 0) + item.count
@@ -42,24 +42,14 @@ const CartList = (props) => {
                         <CartItem key={index}
                                   item={item}
                                   amount={amount}
-                                  prise={props.cart.find(() => item).itemPrice}
+                                  prise={cart.find(() => item).itemPrice}
+                                  remove={remove}
                         />
                     )
                 }
                 </tbody>
             </table>
            <StyledButton>Заказать {totalCost}₽</StyledButton>
-            {/*<div className={'cartTitle'}>*/}
-            {/*    <h2>Название</h2>*/}
-            {/*    <h2>Количество</h2>*/}
-            {/*    <h2>Цена</h2>*/}
-            {/*    <h2>Стоимость</h2>*/}
-            {/*</div>*/}
-            {/*{*/}
-            {/*    Object.entries(cartList).map(([item, amount], index) =>*/}
-            {/*        <CartItem key={index} item={item} amount={amount} prise={props.cart.find(() => item).itemPrice}/>*/}
-            {/*    )*/}
-            {/*}*/}
         </div>
     );
 };

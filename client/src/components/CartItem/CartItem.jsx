@@ -2,7 +2,7 @@ import React from 'react';
 import './CardItem.css'
 import StyledButton from "../UI/StyledButton/StyledButton";
 
-const CartItem = ({item, amount, prise, totalCost}) => {
+const CartItem = ({item, amount, prise, remove}) => {
 
     return (
         <tr className={'cartItem'}>
@@ -10,7 +10,7 @@ const CartItem = ({item, amount, prise, totalCost}) => {
             <td className={'cartItemAmount'}>{amount}кг</td>
             <td className={'cartItemPrise'}>{prise}₽</td>
             <td className={'cartItemTotal'}>{amount * prise}₽</td>
-            <td><StyledButton>X</StyledButton></td>
+            <td><StyledButton onClick={() => remove(item)}>X</StyledButton></td>
         </tr>
     );
 };

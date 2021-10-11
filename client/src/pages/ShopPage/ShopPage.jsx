@@ -26,7 +26,6 @@ export const ShopPage = () => {
     }, [])
 
     useMemo(() => {
-        console.log(cartItems)
         cartItems.length && localStorage.setItem('cart', JSON.stringify(cartItems))
     }, [cartItems])
 
