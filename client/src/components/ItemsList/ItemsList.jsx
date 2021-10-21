@@ -3,12 +3,12 @@ import ItemCard from "../ItemCard/ItemCard";
 
 import './ItemsList.css'
 
-const ItemsList = ({items, addToCart}) => {
+const ItemsList = ({items, addItemToCart}) => {
     return (
         <div className={'itemsList'}>
             {
                 items.map(item =>
-                    <ItemCard key={item._id} item={item} addToCart={addToCart}/>
+                    <ItemCard key={item._id} item={item} addItemToCart={addItemToCart}/>
                 )
             }
         </div>

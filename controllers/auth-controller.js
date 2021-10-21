@@ -49,7 +49,7 @@ class AuthController {
         try {
             const activationLink = req.params.link
             await userService.activate(activationLink)
-            return res.redirect(config.get('CLIENT_URL'))
+            return res.redirect(config.get('CLIENT_URL') + '/auth/login')
         } catch (e) {
             console.log(e)
         }

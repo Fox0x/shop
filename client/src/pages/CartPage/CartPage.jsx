@@ -1,21 +1,23 @@
 import './CartPage.css'
 import {NavbarComponent} from "../../components/Navbar/NavbarComponent";
-import {useMemo, useState} from "react";
 import CartList from "../../components/CartList/CartList";
+import {useEffect, useState} from "react";
+
 
 const CartPage = () => {
-
-    const [cart, setCart] = useState(JSON.parse(localStorage.getItem('cart')))
+    const [cart, setCart] = useState(JSON.parse(localStorage.getItem('cart')) || [])
 
     const removeItemFromCart = (item) => {
-        setCart(cart.filter(i => i.itemTitle !== item))
-
+        item.amount > 1
+            ?
+            item.amount--
+            :
+            setCart(cart.filter(i => i.title !== item))
     }
 
-    useMemo(() => {
+    useEffect(() => {
         localStorage.setItem('cart', JSON.stringify(cart))
     }, [cart])
-
 
     return (
         <div>

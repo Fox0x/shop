@@ -1,27 +1,10 @@
 import './CartList.css'
-import React, {useEffect, useState} from 'react';
-import CartItem from "../CartItem/CartItem";
+import React, {useState} from 'react';
 import StyledButton from "../UI/StyledButton/StyledButton";
+import CartItem from "../CartItem/CartItem";
 
 const CartList = ({cart, remove}) => {
-
     const [totalCost, setTotalCost] = useState(0)
-
-    const cartList = cart.map((item) => {
-        return {count: 1, name: item.itemTitle}
-    }).reduce((list, item) => {
-        list[item.name] = (list[item.name] || 0) + item.count
-        return list
-    }, {})
-
-
-
-
-   useEffect(() => {
-       let totalCostValue = 0
-       Array.from(document.getElementsByClassName('cartItemTotal')).map(item => (totalCostValue += parseInt(item.textContent)))
-       setTotalCost(totalCostValue)
-   }, [cartList])
 
 
     return (
@@ -38,18 +21,14 @@ const CartList = ({cart, remove}) => {
                     <th/>
                 </tr>
                 {
-                    Object.entries(cartList).map(([item, amount], index) =>
-                        <CartItem key={index}
-                                  item={item}
-                                  amount={amount}
-                                  prise={cart.find(() => item).itemPrice}
-                                  remove={remove}
-                        />
+                    cart.map((item, index) =>
+                        <CartItem key={index} title={item.title} amount={item.amount} price={item.price}
+                                  remove={remove}/>
                     )
                 }
                 </tbody>
             </table>
-           <StyledButton>Заказать {totalCost}₽</StyledButton>
+            <StyledButton>Заказать {totalCost}₽</StyledButton>
         </div>
     );
 };
